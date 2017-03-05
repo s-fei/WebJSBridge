@@ -200,17 +200,20 @@
 					E49770ED1E6C1E970034E3B7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = QJWKFR3L8K;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					E49771011E6C1E970034E3B7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = QJWKFR3L8K;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = E49770ED1E6C1E970034E3B7;
 					};
 					E497710C1E6C1E970034E3B7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = QJWKFR3L8K;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = E49770ED1E6C1E970034E3B7;
 					};
