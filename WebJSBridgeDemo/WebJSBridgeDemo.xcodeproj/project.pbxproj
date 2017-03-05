@@ -16,23 +16,6 @@
 		E49771221E6C1F650034E3B7 /* demo.html in Resources */ = {isa = PBXBuildFile; fileRef = E49771211E6C1F650034E3B7 /* demo.html */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		E49771031E6C1E970034E3B7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E49770E61E6C1E970034E3B7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E49770ED1E6C1E970034E3B7;
-			remoteInfo = WebJSBridgeDemo;
-		};
-		E497710E1E6C1E970034E3B7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E49770E61E6C1E970034E3B7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E49770ED1E6C1E970034E3B7;
-			remoteInfo = WebJSBridgeDemo;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		E49770EE1E6C1E970034E3B7 /* WebJSBridgeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebJSBridgeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49770F11E6C1E970034E3B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,28 +24,12 @@
 		E49770F81E6C1E970034E3B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E49770FB1E6C1E970034E3B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E49770FD1E6C1E970034E3B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E49771021E6C1E970034E3B7 /* WebJSBridgeDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebJSBridgeDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E497710D1E6C1E970034E3B7 /* WebJSBridgeDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebJSBridgeDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E497711F1E6C1EB30034E3B7 /* WebJSBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebJSBridge.swift; sourceTree = "<group>"; };
 		E49771211E6C1F650034E3B7 /* demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demo.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E49770EB1E6C1E970034E3B7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E49770FF1E6C1E970034E3B7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E497710A1E6C1E970034E3B7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -84,8 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				E49770EE1E6C1E970034E3B7 /* WebJSBridgeDemo.app */,
-				E49771021E6C1E970034E3B7 /* WebJSBridgeDemoTests.xctest */,
-				E497710D1E6C1E970034E3B7 /* WebJSBridgeDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,42 +90,6 @@
 			productReference = E49770EE1E6C1E970034E3B7 /* WebJSBridgeDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E49771011E6C1E970034E3B7 /* WebJSBridgeDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E49771191E6C1E970034E3B7 /* Build configuration list for PBXNativeTarget "WebJSBridgeDemoTests" */;
-			buildPhases = (
-				E49770FE1E6C1E970034E3B7 /* Sources */,
-				E49770FF1E6C1E970034E3B7 /* Frameworks */,
-				E49771001E6C1E970034E3B7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E49771041E6C1E970034E3B7 /* PBXTargetDependency */,
-			);
-			name = WebJSBridgeDemoTests;
-			productName = WebJSBridgeDemoTests;
-			productReference = E49771021E6C1E970034E3B7 /* WebJSBridgeDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		E497710C1E6C1E970034E3B7 /* WebJSBridgeDemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E497711C1E6C1E970034E3B7 /* Build configuration list for PBXNativeTarget "WebJSBridgeDemoUITests" */;
-			buildPhases = (
-				E49771091E6C1E970034E3B7 /* Sources */,
-				E497710A1E6C1E970034E3B7 /* Frameworks */,
-				E497710B1E6C1E970034E3B7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E497710F1E6C1E970034E3B7 /* PBXTargetDependency */,
-			);
-			name = WebJSBridgeDemoUITests;
-			productName = WebJSBridgeDemoUITests;
-			productReference = E497710D1E6C1E970034E3B7 /* WebJSBridgeDemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -176,20 +105,6 @@
 						DevelopmentTeam = QJWKFR3L8K;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
-					};
-					E49771011E6C1E970034E3B7 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = QJWKFR3L8K;
-						LastSwiftMigration = 0820;
-						ProvisioningStyle = Automatic;
-						TestTargetID = E49770ED1E6C1E970034E3B7;
-					};
-					E497710C1E6C1E970034E3B7 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = QJWKFR3L8K;
-						LastSwiftMigration = 0820;
-						ProvisioningStyle = Automatic;
-						TestTargetID = E49770ED1E6C1E970034E3B7;
 					};
 				};
 			};
@@ -207,8 +122,6 @@
 			projectRoot = "";
 			targets = (
 				E49770ED1E6C1E970034E3B7 /* WebJSBridgeDemo */,
-				E49771011E6C1E970034E3B7 /* WebJSBridgeDemoTests */,
-				E497710C1E6C1E970034E3B7 /* WebJSBridgeDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -225,20 +138,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E49771001E6C1E970034E3B7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E497710B1E6C1E970034E3B7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -252,34 +151,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E49770FE1E6C1E970034E3B7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E49771091E6C1E970034E3B7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E49771041E6C1E970034E3B7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E49770ED1E6C1E970034E3B7 /* WebJSBridgeDemo */;
-			targetProxy = E49771031E6C1E970034E3B7 /* PBXContainerItemProxy */;
-		};
-		E497710F1E6C1E970034E3B7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E49770ED1E6C1E970034E3B7 /* WebJSBridgeDemo */;
-			targetProxy = E497710E1E6C1E970034E3B7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E49770F51E6C1E970034E3B7 /* Main.storyboard */ = {
@@ -420,64 +292,6 @@
 			};
 			name = Release;
 		};
-		E497711A1E6C1E970034E3B7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = QJWKFR3L8K;
-				INFOPLIST_FILE = WebJSBridgeDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Texy.WebJSBridgeDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WebJSBridgeDemo.app/WebJSBridgeDemo";
-			};
-			name = Debug;
-		};
-		E497711B1E6C1E970034E3B7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = QJWKFR3L8K;
-				INFOPLIST_FILE = WebJSBridgeDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Texy.WebJSBridgeDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WebJSBridgeDemo.app/WebJSBridgeDemo";
-			};
-			name = Release;
-		};
-		E497711D1E6C1E970034E3B7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = QJWKFR3L8K;
-				INFOPLIST_FILE = WebJSBridgeDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Texy.WebJSBridgeDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = WebJSBridgeDemo;
-			};
-			name = Debug;
-		};
-		E497711E1E6C1E970034E3B7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = QJWKFR3L8K;
-				INFOPLIST_FILE = WebJSBridgeDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Texy.WebJSBridgeDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = WebJSBridgeDemo;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -495,24 +309,6 @@
 			buildConfigurations = (
 				E49771171E6C1E970034E3B7 /* Debug */,
 				E49771181E6C1E970034E3B7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E49771191E6C1E970034E3B7 /* Build configuration list for PBXNativeTarget "WebJSBridgeDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E497711A1E6C1E970034E3B7 /* Debug */,
-				E497711B1E6C1E970034E3B7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E497711C1E6C1E970034E3B7 /* Build configuration list for PBXNativeTarget "WebJSBridgeDemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E497711D1E6C1E970034E3B7 /* Debug */,
-				E497711E1E6C1E970034E3B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
