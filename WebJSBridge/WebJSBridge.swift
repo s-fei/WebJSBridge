@@ -10,16 +10,13 @@ import UIKit
 import JavaScriptCore
 
 /*! 回调数据 */
-typealias WebJSResponseCallback = ( responseData:AnyObject?) -> ()
+typealias WebJSResponseCallback = (_ responseData:Any?) -> ()
 
 /*! js回调App的block */
-typealias WebJBHandler = (data:AnyObject?, responseCallback:WebJSResponseCallback) -> ()
+typealias WebJBHandler = ( _ data:Any?, _ responseCallback:WebJSResponseCallback) -> ()
 
 /*! webView与JS的初始化回调 */
-typealias WebJSInitHandler = (success:Bool, error:String) -> ()
-
-/*! js与APP的实际参数 */
-typealias JSHandler = ( handlerName:String, data:AnyObject?, callBack:String?) -> ()
+typealias WebJSInitHandler = ( _ success:Bool, _ error:String) -> ()
 
 
 /*
@@ -37,7 +34,7 @@ typealias JSHandler = ( handlerName:String, data:AnyObject?, callBack:String?) -
  *func removeHandler(handlerName:String)
  *
  *
- /// 移除所有的监听
+/// 移除所有的监听
  *func reset()
  *
  *
@@ -46,13 +43,13 @@ typealias JSHandler = ( handlerName:String, data:AnyObject?, callBack:String?) -
  *
  */
 @objc class WebJSBridge: NSObject,WebJSDelegate {
-    internal var appHandler:JSHandler!
-    internal var webView:UIWebView
-    internal var jsContext:JSContext
-    internal var jsModelDict:[String:WebJSModel] = [String:WebJSModel]()
-    internal var webViewDelegate:UIWebViewDelegate?
-    internal var isFinishLoad = false
-    internal var cacheCallDict:[String:AnyObject?] = [String:AnyObject?]()
+    fileprivate var appHandler: WebJSDelegate.JSHandler!
+    fileprivate var webView:UIWebView
+    fileprivate var jsContext:JSContext
+    fileprivate var jsModelDict:[String:WebJSModel] = [String:WebJSModel]()
+    fileprivate var webViewDelegate:UIWebViewDelegate?
+    fileprivate var isFinishLoad = false
+    fileprivate var cacheCallDict:[String:Any?] = [String:Any?]()
     /// 初始化桥接功能
     ///
     /// - Parameters:
@@ -63,7 +60,7 @@ typealias JSHandler = ( handlerName:String, data:AnyObject?, callBack:String?) -
     init(_ webView:UIWebView,_ jsKey:String,webViewDelegate:UIWebViewDelegate?,handler:WebJSInitHandler?) {
         self.webView = webView
         self.webViewDelegate = webViewDelegate
-        if let context = webView.valueForKey("documentView.webView.mainFrame.javaScriptContext") as? JSContext {
+        if let context = webView.value(forKeyPath: "documentView.webView.mainFrame.javaScriptContext") as? JSContext {
             jsContext = context
         }
         else
@@ -71,15 +68,15 @@ typealias JSHandler = ( handlerName:String, data:AnyObject?, callBack:String?) -
             print("无法获取webView的JSContext")
             jsContext = JSContext()
             if let `handler` = handler {
-                handler(success: false,error: "无法获取webView的JSContext，请检查webView")
+               handler(false,"无法获取webView的JSContext，请检查webView")
             }
             super.init()
             return
         }
         super.init()
-        jsContext.setObject(self, forKeyedSubscript: jsKey)
+        jsContext.setObject(self, forKeyedSubscript: jsKey as (NSCopying & NSObjectProtocol)!)
         if let `handler` = handler {
-            handler(success: true,error: "JS与iOS桥接成功")
+            handler(true,"JS与iOS桥接成功")
         }
         initRegisterHandler()
         webView.delegate = self
@@ -90,7 +87,7 @@ typealias JSHandler = ( handlerName:String, data:AnyObject?, callBack:String?) -
     /// - Parameters:
     ///   - handlerName: 双方约定的Key
     ///   - webJBHandler: 里面的data:给App的数据，responseCallback：App给js的响应结果
-    func registerHandler(handlerName:String,webJBHandler: WebJBHandler){
+    func registerHandler(handlerName:String,webJBHandler: @escaping WebJBHandler){
         let model = WebJSModel()
         model.handlerName = handlerName
         model.isCall = false
@@ -99,11 +96,11 @@ typealias JSHandler = ( handlerName:String, data:AnyObject?, callBack:String?) -
             [weak self] (responseData) in
             guard let `self` = self else { return }
             if let callName = model.callName, let jsParamsFunc = self.jsContext.objectForKeyedSubscript(callName) {
-                var arr = [AnyObject]()
+                var arr = [Any]()
                 if let data = responseData {
                     arr.append(data)
                 }
-                jsParamsFunc.callWithArguments(arr)
+                jsParamsFunc.call(withArguments: arr)
             }
         }
         model.responseCallback = responseCallback
@@ -114,7 +111,7 @@ typealias JSHandler = ( handlerName:String, data:AnyObject?, callBack:String?) -
     ///
     /// - Parameter handlerName: 双方约定的Key
     func removeHandler(handlerName:String){
-        jsModelDict.removeValueForKey(handlerName)
+        jsModelDict.removeValue(forKey: handlerName)
     }
     
     /// 移除所有的监听
@@ -128,7 +125,7 @@ typealias JSHandler = ( handlerName:String, data:AnyObject?, callBack:String?) -
     ///   - handlerName: handlerName: 双方约定的Key
     ///   - data: 给js的数据
     ///   - responseCallback: js给App的响应结果
-    func callHandler(handlerName:String,data:AnyObject?,responseCallback:WebJSResponseCallback?){
+    func callHandler(handlerName:String,data:Any?,responseCallback:WebJSResponseCallback?){
         if let _ = responseCallback {
             let model = WebJSModel()
             model.handlerName = handlerName
@@ -138,11 +135,11 @@ typealias JSHandler = ( handlerName:String, data:AnyObject?, callBack:String?) -
         }
         if isFinishLoad {
             if let jsParamsFunc = jsContext.objectForKeyedSubscript(handlerName) {
-                var arr = [AnyObject]()
+                var arr = [Any]()
                 if let callData = data {
                     arr.append(callData)
                 }
-                jsParamsFunc.callWithArguments(arr)
+                jsParamsFunc.call(withArguments: arr)
             }
         }
         else
@@ -161,7 +158,7 @@ typealias JSHandler = ( handlerName:String, data:AnyObject?, callBack:String?) -
                 if let webJBHandler = jsModle.webJBHandler{
                     jsModle.callName = callBack
                     if let responseCallback = jsModle.responseCallback {
-                        webJBHandler(data: data,responseCallback: responseCallback)
+                        webJBHandler(data,responseCallback)
                     }
                     else
                     {
@@ -169,24 +166,24 @@ typealias JSHandler = ( handlerName:String, data:AnyObject?, callBack:String?) -
                             [weak self] (responseData) in
                             guard let `self` = self else { return }
                             if let jsParamsFunc = self.jsContext.objectForKeyedSubscript(handlerName) {
-                                var arr = [AnyObject]()
+                                var arr = [Any]()
                                 if let data = responseData {
                                     arr.append(data)
                                 }
-                                jsParamsFunc.callWithArguments(arr)
+                                jsParamsFunc.call(withArguments: arr)
                             }
                         }
-                        webJBHandler(data: data,responseCallback: responseCallback)
+                        webJBHandler(data,responseCallback)
                     }
                 }
                 else if let responseCallback = jsModle.responseCallback { //isCall一定等于true
-                    responseCallback(responseData: data)
-                    //                    self.jsModelDict.removeValue(forKey: handlerName)
+                    responseCallback(data)
+//                    self.jsModelDict.removeValue(forKey: handlerName)
                 }
                 //这里有两种情况会销毁js给App的响应结果 1,call js后 js给App的响应结果  2.call js后  js没有给App响应结果 接下来有了 call App的动作
                 for (handlerName, jsModel) in self.jsModelDict {
                     if jsModel.isCall {
-                        self.jsModelDict.removeValueForKey(handlerName)
+                        self.jsModelDict.removeValue(forKey: handlerName)
                     }
                 }
             }
@@ -194,16 +191,16 @@ typealias JSHandler = ( handlerName:String, data:AnyObject?, callBack:String?) -
     }
     
     /*! h5加载成功后才能Call到js */
-    private func callCache(){
+    fileprivate func callCache(){
         cacheCallDict.forEach {
             [weak self](handlerName, data) in
             guard let `self` = self else { return }
             if let jsParamsFunc = self.jsContext.objectForKeyedSubscript(handlerName) {
-                var arr = [AnyObject]()
+                var arr = [Any]()
                 if let callData = data {
                     arr.append(callData)
                 }
-                jsParamsFunc.callWithArguments(arr)
+                jsParamsFunc.call(withArguments: arr)
             }
         }
         cacheCallDict.removeAll()
@@ -213,26 +210,26 @@ typealias JSHandler = ( handlerName:String, data:AnyObject?, callBack:String?) -
 
 /*! 这里是为了使用webViewDidFinishLoad 但必须将其回调到所在的VC中 */
 extension WebJSBridge:UIWebViewDelegate{
-    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        if let boo = webViewDelegate?.webView?(webView, shouldStartLoadWithRequest: request, navigationType: navigationType)
-        {
+    
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool{
+        if let boo = webViewDelegate?.webView?(webView, shouldStartLoadWith: request, navigationType: navigationType) {
             return boo
         }
-        return true
+       return true
     }
     
-    func webViewDidStartLoad( webView: UIWebView){
+    func webViewDidStartLoad(_ webView: UIWebView){
         isFinishLoad = false
         webViewDelegate?.webViewDidStartLoad?(webView)
     }
     
-    func webViewDidFinishLoad( webView: UIWebView) {
+    func webViewDidFinishLoad(_ webView: UIWebView) {
         isFinishLoad = true
         callCache()
         webViewDelegate?.webViewDidFinishLoad?(webView)
     }
     
-    func webView( webView: UIWebView, didFailLoadWithError error: NSError) {
+    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
         webViewDelegate?.webView?(webView, didFailLoadWithError: error)
     }
 }
@@ -243,7 +240,9 @@ extension WebJSBridge:UIWebViewDelegate{
  *
  * 增加属性为了H5中调用
  */
-@objc internal  protocol WebJSDelegate: JSExport {
+@objc fileprivate  protocol WebJSDelegate: JSExport {
+    /*! js与APP的实际参数 */
+    typealias JSHandler = (_ handlerName:String,_ data:Any?,_ callBack:String?) -> ()
     /*! h5中统一调用该属性*/
     var appHandler:JSHandler! { get set }
     
@@ -253,7 +252,7 @@ extension WebJSBridge:UIWebViewDelegate{
  *
  * 该对象主要处理WebJSDelegate中registerHandler和方法的对接
  */
-internal class WebJSModel: NSObject {
+fileprivate class WebJSModel: NSObject {
     
     var handlerName:String = ""
     var isCall = false //true:App调用js  false:js调用APP
@@ -261,7 +260,7 @@ internal class WebJSModel: NSObject {
     var responseCallback:WebJSResponseCallback?
     var callName:String?
     
-    override func setValue( value: AnyObject?, forUndefinedKey key: String) {
+    override func setValue(_ value: Any?, forUndefinedKey key: String) {
         
     }
 }

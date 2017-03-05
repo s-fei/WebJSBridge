@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "WebJSBridge"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "JS与APP交互"
 
   s.description  = <<-DESC
