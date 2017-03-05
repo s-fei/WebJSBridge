@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E49770F21E6C1E970034E3B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49770F11E6C1E970034E3B7 /* AppDelegate.swift */; };
+		E49770F41E6C1E970034E3B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49770F31E6C1E970034E3B7 /* ViewController.swift */; };
+		E49770F71E6C1E970034E3B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49770F51E6C1E970034E3B7 /* Main.storyboard */; };
+		E49770F91E6C1E970034E3B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E49770F81E6C1E970034E3B7 /* Assets.xcassets */; };
+		E49770FC1E6C1E970034E3B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49770FA1E6C1E970034E3B7 /* LaunchScreen.storyboard */; };
+		E49771071E6C1E970034E3B7 /* WebJSBridgeDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49771061E6C1E970034E3B7 /* WebJSBridgeDemoTests.swift */; };
+		E49771121E6C1E970034E3B7 /* WebJSBridgeDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49771111E6C1E970034E3B7 /* WebJSBridgeDemoUITests.swift */; };
+		E49771201E6C1EB30034E3B7 /* WebJSBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E497711F1E6C1EB30034E3B7 /* WebJSBridge.swift */; };
+		E49771221E6C1F650034E3B7 /* demo.html in Resources */ = {isa = PBXBuildFile; fileRef = E49771211E6C1F650034E3B7 /* demo.html */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E49771031E6C1E970034E3B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E49770E61E6C1E970034E3B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E49770ED1E6C1E970034E3B7;
+			remoteInfo = WebJSBridgeDemo;
+		};
+		E497710E1E6C1E970034E3B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E49770E61E6C1E970034E3B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E49770ED1E6C1E970034E3B7;
+			remoteInfo = WebJSBridgeDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E49770EE1E6C1E970034E3B7 /* WebJSBridgeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebJSBridgeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49770F11E6C1E970034E3B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E49770F31E6C1E970034E3B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E49770F61E6C1E970034E3B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E49770F81E6C1E970034E3B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E49770FB1E6C1E970034E3B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E49770FD1E6C1E970034E3B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E49771021E6C1E970034E3B7 /* WebJSBridgeDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebJSBridgeDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49771061E6C1E970034E3B7 /* WebJSBridgeDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebJSBridgeDemoTests.swift; sourceTree = "<group>"; };
+		E49771081E6C1E970034E3B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E497710D1E6C1E970034E3B7 /* WebJSBridgeDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebJSBridgeDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49771111E6C1E970034E3B7 /* WebJSBridgeDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebJSBridgeDemoUITests.swift; sourceTree = "<group>"; };
+		E49771131E6C1E970034E3B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E497711F1E6C1EB30034E3B7 /* WebJSBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebJSBridge.swift; sourceTree = "<group>"; };
+		E49771211E6C1F650034E3B7 /* demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demo.html; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E49770EB1E6C1E970034E3B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E49770FF1E6C1E970034E3B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E497710A1E6C1E970034E3B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E49770E51E6C1E970034E3B7 = {
+			isa = PBXGroup;
+			children = (
+				E49770F01E6C1E970034E3B7 /* WebJSBridgeDemo */,
+				E49771051E6C1E970034E3B7 /* WebJSBridgeDemoTests */,
+				E49771101E6C1E970034E3B7 /* WebJSBridgeDemoUITests */,
+				E49770EF1E6C1E970034E3B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E49770EF1E6C1E970034E3B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E49770EE1E6C1E970034E3B7 /* WebJSBridgeDemo.app */,
+				E49771021E6C1E970034E3B7 /* WebJSBridgeDemoTests.xctest */,
+				E497710D1E6C1E970034E3B7 /* WebJSBridgeDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E49770F01E6C1E970034E3B7 /* WebJSBridgeDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E49771211E6C1F650034E3B7 /* demo.html */,
+				E497711F1E6C1EB30034E3B7 /* WebJSBridge.swift */,
+				E49770F11E6C1E970034E3B7 /* AppDelegate.swift */,
+				E49770F31E6C1E970034E3B7 /* ViewController.swift */,
+				E49770F51E6C1E970034E3B7 /* Main.storyboard */,
+				E49770F81E6C1E970034E3B7 /* Assets.xcassets */,
+				E49770FA1E6C1E970034E3B7 /* LaunchScreen.storyboard */,
+				E49770FD1E6C1E970034E3B7 /* Info.plist */,
+			);
+			path = WebJSBridgeDemo;
+			sourceTree = "<group>";
+		};
+		E49771051E6C1E970034E3B7 /* WebJSBridgeDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				E49771061E6C1E970034E3B7 /* WebJSBridgeDemoTests.swift */,
+				E49771081E6C1E970034E3B7 /* Info.plist */,
+			);
+			path = WebJSBridgeDemoTests;
+			sourceTree = "<group>";
+		};
+		E49771101E6C1E970034E3B7 /* WebJSBridgeDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E49771111E6C1E970034E3B7 /* WebJSBridgeDemoUITests.swift */,
+				E49771131E6C1E970034E3B7 /* Info.plist */,
+			);
+			path = WebJSBridgeDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E49770ED1E6C1E970034E3B7 /* WebJSBridgeDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E49771161E6C1E970034E3B7 /* Build configuration list for PBXNativeTarget "WebJSBridgeDemo" */;
+			buildPhases = (
+				E49770EA1E6C1E970034E3B7 /* Sources */,
+				E49770EB1E6C1E970034E3B7 /* Frameworks */,
+				E49770EC1E6C1E970034E3B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebJSBridgeDemo;
+			productName = WebJSBridgeDemo;
+			productReference = E49770EE1E6C1E970034E3B7 /* WebJSBridgeDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E49771011E6C1E970034E3B7 /* WebJSBridgeDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E49771191E6C1E970034E3B7 /* Build configuration list for PBXNativeTarget "WebJSBridgeDemoTests" */;
+			buildPhases = (
+				E49770FE1E6C1E970034E3B7 /* Sources */,
+				E49770FF1E6C1E970034E3B7 /* Frameworks */,
+				E49771001E6C1E970034E3B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E49771041E6C1E970034E3B7 /* PBXTargetDependency */,
+			);
+			name = WebJSBridgeDemoTests;
+			productName = WebJSBridgeDemoTests;
+			productReference = E49771021E6C1E970034E3B7 /* WebJSBridgeDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E497710C1E6C1E970034E3B7 /* WebJSBridgeDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E497711C1E6C1E970034E3B7 /* Build configuration list for PBXNativeTarget "WebJSBridgeDemoUITests" */;
+			buildPhases = (
+				E49771091E6C1E970034E3B7 /* Sources */,
+				E497710A1E6C1E970034E3B7 /* Frameworks */,
+				E497710B1E6C1E970034E3B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E497710F1E6C1E970034E3B7 /* PBXTargetDependency */,
+			);
+			name = WebJSBridgeDemoUITests;
+			productName = WebJSBridgeDemoUITests;
+			productReference = E497710D1E6C1E970034E3B7 /* WebJSBridgeDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E49770E61E6C1E970034E3B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = song;
+				TargetAttributes = {
+					E49770ED1E6C1E970034E3B7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = QJWKFR3L8K;
+						ProvisioningStyle = Automatic;
+					};
+					E49771011E6C1E970034E3B7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = QJWKFR3L8K;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E49770ED1E6C1E970034E3B7;
+					};
+					E497710C1E6C1E970034E3B7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = QJWKFR3L8K;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E49770ED1E6C1E970034E3B7;
+					};
+				};
+			};
+			buildConfigurationList = E49770E91E6C1E970034E3B7 /* Build configuration list for PBXProject "WebJSBridgeDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E49770E51E6C1E970034E3B7;
+			productRefGroup = E49770EF1E6C1E970034E3B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E49770ED1E6C1E970034E3B7 /* WebJSBridgeDemo */,
+				E49771011E6C1E970034E3B7 /* WebJSBridgeDemoTests */,
+				E497710C1E6C1E970034E3B7 /* WebJSBridgeDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E49770EC1E6C1E970034E3B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E49770FC1E6C1E970034E3B7 /* LaunchScreen.storyboard in Resources */,
+				E49771221E6C1F650034E3B7 /* demo.html in Resources */,
+				E49770F91E6C1E970034E3B7 /* Assets.xcassets in Resources */,
+				E49770F71E6C1E970034E3B7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E49771001E6C1E970034E3B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E497710B1E6C1E970034E3B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E49770EA1E6C1E970034E3B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E49771201E6C1EB30034E3B7 /* WebJSBridge.swift in Sources */,
+				E49770F41E6C1E970034E3B7 /* ViewController.swift in Sources */,
+				E49770F21E6C1E970034E3B7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E49770FE1E6C1E970034E3B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E49771071E6C1E970034E3B7 /* WebJSBridgeDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E49771091E6C1E970034E3B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E49771121E6C1E970034E3B7 /* WebJSBridgeDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E49771041E6C1E970034E3B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E49770ED1E6C1E970034E3B7 /* WebJSBridgeDemo */;
+			targetProxy = E49771031E6C1E970034E3B7 /* PBXContainerItemProxy */;
+		};
+		E497710F1E6C1E970034E3B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E49770ED1E6C1E970034E3B7 /* WebJSBridgeDemo */;
+			targetProxy = E497710E1E6C1E970034E3B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E49770F51E6C1E970034E3B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E49770F61E6C1E970034E3B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E49770FA1E6C1E970034E3B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E49770FB1E6C1E970034E3B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E49771141E6C1E970034E3B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E49771151E6C1E970034E3B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E49771171E6C1E970034E3B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QJWKFR3L8K;
+				INFOPLIST_FILE = WebJSBridgeDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Texy.WebJSBridgeDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E49771181E6C1E970034E3B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QJWKFR3L8K;
+				INFOPLIST_FILE = WebJSBridgeDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Texy.WebJSBridgeDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E497711A1E6C1E970034E3B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = QJWKFR3L8K;
+				INFOPLIST_FILE = WebJSBridgeDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Texy.WebJSBridgeDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WebJSBridgeDemo.app/WebJSBridgeDemo";
+			};
+			name = Debug;
+		};
+		E497711B1E6C1E970034E3B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = QJWKFR3L8K;
+				INFOPLIST_FILE = WebJSBridgeDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Texy.WebJSBridgeDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WebJSBridgeDemo.app/WebJSBridgeDemo";
+			};
+			name = Release;
+		};
+		E497711D1E6C1E970034E3B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = QJWKFR3L8K;
+				INFOPLIST_FILE = WebJSBridgeDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Texy.WebJSBridgeDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = WebJSBridgeDemo;
+			};
+			name = Debug;
+		};
+		E497711E1E6C1E970034E3B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = QJWKFR3L8K;
+				INFOPLIST_FILE = WebJSBridgeDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Texy.WebJSBridgeDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = WebJSBridgeDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E49770E91E6C1E970034E3B7 /* Build configuration list for PBXProject "WebJSBridgeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E49771141E6C1E970034E3B7 /* Debug */,
+				E49771151E6C1E970034E3B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E49771161E6C1E970034E3B7 /* Build configuration list for PBXNativeTarget "WebJSBridgeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E49771171E6C1E970034E3B7 /* Debug */,
+				E49771181E6C1E970034E3B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E49771191E6C1E970034E3B7 /* Build configuration list for PBXNativeTarget "WebJSBridgeDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E497711A1E6C1E970034E3B7 /* Debug */,
+				E497711B1E6C1E970034E3B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E497711C1E6C1E970034E3B7 /* Build configuration list for PBXNativeTarget "WebJSBridgeDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E497711D1E6C1E970034E3B7 /* Debug */,
+				E497711E1E6C1E970034E3B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E49770E61E6C1E970034E3B7 /* Project object */;
+}

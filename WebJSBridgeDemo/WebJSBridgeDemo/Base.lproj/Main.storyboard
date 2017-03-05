@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dRx-bD-BBk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="FE7-82-596">
+            <objects>
+                <viewController id="dRx-bD-BBk" customClass="ViewController" customModule="WebJSBridge_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VEH-Iz-BGI"/>
+                        <viewControllerLayoutGuide type="bottom" id="vEw-Jg-Jl0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QIN-Er-eqQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HuG-wW-xBk">
+                                <rect key="frame" x="0.0" y="105" width="375" height="562"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="dRx-bD-BBk" id="y1Z-qt-Bhe"/>
+                                </connections>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JoG-xp-6iM">
+                                <rect key="frame" x="10" y="607" width="355" height="40"/>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.31372549020000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LyO-8f-99a"/>
+                                </constraints>
+                                <state key="normal" title="App调用js，需要结果反馈">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appToJSResult:" destination="dRx-bD-BBk" eventType="touchUpInside" id="Qm9-PB-DuY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPN-mQ-Wxd">
+                                <rect key="frame" x="10" y="547" width="355" height="40"/>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.31372549020000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="69u-ti-wSe"/>
+                                </constraints>
+                                <state key="normal" title="App调用js，不需要结果反馈">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appToJSNotResult:" destination="dRx-bD-BBk" eventType="touchUpInside" id="a1k-Xa-3qb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J65-o7-2pI">
+                                <rect key="frame" x="30" y="40" width="345" height="65"/>
+                                <string key="text">绿色:h5中的按钮，点击调用APP方法
+灰色:h5中的按钮，不可点击
+橙色:App中的按钮，点击调用js中方法</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="0.90588235289999997" green="0.1647058824" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vEw-Jg-Jl0" firstAttribute="top" secondItem="HuG-wW-xBk" secondAttribute="bottom" id="2yc-Wr-pQf"/>
+                            <constraint firstAttribute="trailing" secondItem="HuG-wW-xBk" secondAttribute="trailing" id="4ri-77-Ke2"/>
+                            <constraint firstItem="J65-o7-2pI" firstAttribute="leading" secondItem="QIN-Er-eqQ" secondAttribute="leading" constant="30" id="6aH-oD-Ocd"/>
+                            <constraint firstItem="JoG-xp-6iM" firstAttribute="width" secondItem="hPN-mQ-Wxd" secondAttribute="width" id="8e2-4z-0MZ"/>
+                            <constraint firstAttribute="trailing" secondItem="HuG-wW-xBk" secondAttribute="trailing" id="D0o-in-jNa"/>
+                            <constraint firstItem="HuG-wW-xBk" firstAttribute="leading" secondItem="QIN-Er-eqQ" secondAttribute="leading" id="Dxs-dD-NQv"/>
+                            <constraint firstItem="vEw-Jg-Jl0" firstAttribute="top" secondItem="JoG-xp-6iM" secondAttribute="bottom" constant="20" id="Nay-hi-8yM"/>
+                            <constraint firstItem="J65-o7-2pI" firstAttribute="top" secondItem="VEH-Iz-BGI" secondAttribute="bottom" constant="20" id="PoH-Nx-rK9"/>
+                            <constraint firstItem="hPN-mQ-Wxd" firstAttribute="width" secondItem="QIN-Er-eqQ" secondAttribute="width" constant="-20" id="RSI-Cx-f5s"/>
+                            <constraint firstItem="JoG-xp-6iM" firstAttribute="top" secondItem="hPN-mQ-Wxd" secondAttribute="bottom" constant="20" id="aWG-ri-QhG"/>
+                            <constraint firstAttribute="trailing" secondItem="J65-o7-2pI" secondAttribute="trailing" id="d3v-6u-d4i"/>
+                            <constraint firstItem="HuG-wW-xBk" firstAttribute="leading" secondItem="QIN-Er-eqQ" secondAttribute="leading" id="dIe-aW-iQ8"/>
+                            <constraint firstItem="HuG-wW-xBk" firstAttribute="top" secondItem="J65-o7-2pI" secondAttribute="bottom" id="i0c-Lz-dJv"/>
+                            <constraint firstItem="JoG-xp-6iM" firstAttribute="centerX" secondItem="QIN-Er-eqQ" secondAttribute="centerX" id="pyw-w5-KFO"/>
+                            <constraint firstItem="hPN-mQ-Wxd" firstAttribute="centerX" secondItem="JoG-xp-6iM" secondAttribute="centerX" id="spT-xl-QRA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="HuG-wW-xBk" id="NvZ-YZ-4mi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M9z-VZ-z3l" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

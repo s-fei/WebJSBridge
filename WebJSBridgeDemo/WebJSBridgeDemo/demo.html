@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <title>Document</title>
+            <meta name="viewport"
+                content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+                <style>
+                    .btn-block {
+                        display: block;
+                        height: 40px;
+                        line-height: 40px;
+                        margin: 10px auto;
+                        color: #fff;
+                        background: #8bc53f;
+                        border-radius: 10px;
+                        text-align: center;
+                        text-decoration: none;
+                        font-size: 14px;
+                    }
+                
+                .btn-block1 {
+                    display: block;
+                    height: 40px;
+                    line-height: 40px;
+                    margin: 10px auto;
+                    color: #fff;
+                    background: #868686;
+                    border-radius: 10px;
+                    text-align: center;
+                    text-decoration: none;
+                    font-size: 14px;
+                }
+                
+                .content {
+                    text-align: left;
+                    font-size: 14px;
+                    margin-bottom: 25px;
+                }
+                </style>
+    </head>
+    <body>
+        
+        <br>
+        <div class="btn-block" onclick="AppObject.appHandler('login','js调用App成功','')">
+            js调用App,App不用给js结果
+        </div>
+        <div class="content">js调用App,App不用给js结果</div>
+        
+        <div class="btn-block" onclick="AppObject.appHandler('loginToResult','js调用App成功，给我反馈','loginToResult')">
+            js调用App,App给js结果
+        </div>
+        <div class="content" id="loginToResult">js调用App,App给js结果:内容会改变</div>
+        
+        <div class="btn-block1">下面显示App调用js的结果,没有给App反馈</div>
+        <div class="content" id="appToJSNotResult">App调用js的结果:内容会改变</div>
+        
+        
+        <div class="btn-block1" onclick="appToJSResult()"> 下面显示App调用js的结果,需要给App反馈 </div>
+        <div class="content" id="appToJSResult">App调用js的结果:内容会改变</div>
+        
+        <script type="text/javascript">
+            
+            function loginToResult(argument) {
+                document.getElementById('loginToResult').innerHTML = "js调用App,App给js结果:" + argument;
+            }
+        
+        function appToJSNotResult(argument) {
+            document.getElementById('appToJSNotResult').innerHTML = "App调用js的结果:" + argument['name'];
+        }
+        
+        function appToJSResult(argument) {
+            document.getElementById('appToJSResult').innerHTML = "App调用js回调函数啦， 我是" + argument['name'];
+            AppObject.appHandler('appToJSResult','js已接受到App传来的' + argument['name'],'');
+        }
+        </script>
+        
+        
+        
+        
+    </body>
+</html>
