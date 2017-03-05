@@ -12,8 +12,6 @@
 		E49770F71E6C1E970034E3B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49770F51E6C1E970034E3B7 /* Main.storyboard */; };
 		E49770F91E6C1E970034E3B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E49770F81E6C1E970034E3B7 /* Assets.xcassets */; };
 		E49770FC1E6C1E970034E3B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49770FA1E6C1E970034E3B7 /* LaunchScreen.storyboard */; };
-		E49771071E6C1E970034E3B7 /* WebJSBridgeDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49771061E6C1E970034E3B7 /* WebJSBridgeDemoTests.swift */; };
-		E49771121E6C1E970034E3B7 /* WebJSBridgeDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49771111E6C1E970034E3B7 /* WebJSBridgeDemoUITests.swift */; };
 		E49771201E6C1EB30034E3B7 /* WebJSBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E497711F1E6C1EB30034E3B7 /* WebJSBridge.swift */; };
 		E49771221E6C1F650034E3B7 /* demo.html in Resources */ = {isa = PBXBuildFile; fileRef = E49771211E6C1F650034E3B7 /* demo.html */; };
 /* End PBXBuildFile section */
@@ -44,11 +42,7 @@
 		E49770FB1E6C1E970034E3B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E49770FD1E6C1E970034E3B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E49771021E6C1E970034E3B7 /* WebJSBridgeDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebJSBridgeDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E49771061E6C1E970034E3B7 /* WebJSBridgeDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebJSBridgeDemoTests.swift; sourceTree = "<group>"; };
-		E49771081E6C1E970034E3B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E497710D1E6C1E970034E3B7 /* WebJSBridgeDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebJSBridgeDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E49771111E6C1E970034E3B7 /* WebJSBridgeDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebJSBridgeDemoUITests.swift; sourceTree = "<group>"; };
-		E49771131E6C1E970034E3B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E497711F1E6C1EB30034E3B7 /* WebJSBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebJSBridge.swift; sourceTree = "<group>"; };
 		E49771211E6C1F650034E3B7 /* demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demo.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,8 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				E49770F01E6C1E970034E3B7 /* WebJSBridgeDemo */,
-				E49771051E6C1E970034E3B7 /* WebJSBridgeDemoTests */,
-				E49771101E6C1E970034E3B7 /* WebJSBridgeDemoUITests */,
 				E49770EF1E6C1E970034E3B7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,24 +103,6 @@
 				E49770FD1E6C1E970034E3B7 /* Info.plist */,
 			);
 			path = WebJSBridgeDemo;
-			sourceTree = "<group>";
-		};
-		E49771051E6C1E970034E3B7 /* WebJSBridgeDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				E49771061E6C1E970034E3B7 /* WebJSBridgeDemoTests.swift */,
-				E49771081E6C1E970034E3B7 /* Info.plist */,
-			);
-			path = WebJSBridgeDemoTests;
-			sourceTree = "<group>";
-		};
-		E49771101E6C1E970034E3B7 /* WebJSBridgeDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E49771111E6C1E970034E3B7 /* WebJSBridgeDemoUITests.swift */,
-				E49771131E6C1E970034E3B7 /* Info.plist */,
-			);
-			path = WebJSBridgeDemoUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +256,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E49771071E6C1E970034E3B7 /* WebJSBridgeDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +263,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E49771121E6C1E970034E3B7 /* WebJSBridgeDemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

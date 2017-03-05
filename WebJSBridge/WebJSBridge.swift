@@ -13,10 +13,10 @@ import JavaScriptCore
 typealias WebJSResponseCallback = (_ responseData:Any?) -> ()
 
 /*! js回调App的block */
-typealias WebJBHandler = (_ data:Any?,_ responseCallback:WebJSResponseCallback) -> ()
+typealias WebJBHandler = ( _ data:Any?, _ responseCallback:WebJSResponseCallback) -> ()
 
 /*! webView与JS的初始化回调 */
-typealias WebJSInitHandler = (_ success:Bool,_ error:String) -> ()
+typealias WebJSInitHandler = ( _ success:Bool, _ error:String) -> ()
 
 
 /*
