@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.summary      = "JS与APP交互"
 
   s.description  = <<-DESC
-               JS与APP交互
+               完美实现JS与APP交互
                    DESC
 
   s.homepage     = "https://github.com/spf-iOS/WebJSBridge"
