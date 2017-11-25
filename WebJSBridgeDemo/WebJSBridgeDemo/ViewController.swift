@@ -29,7 +29,7 @@ class ViewController: UIViewController{
         bridge.registerHandler(handlerName: "login") {
             [weak self](data, callBack) in
             guard let `self` = self else { return }
-            print("login:\(data)")
+            print("login:\(String(describing: data))")
             if let string = data as? String{
                 let alert = UIAlertController(title: "js给App的数据", message: string, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "确定", style: .default, handler: nil))
@@ -40,7 +40,7 @@ class ViewController: UIViewController{
         bridge.registerHandler(handlerName: "loginToResult") {
             [weak self](data, callBack) in
             guard let `self` = self else { return }
-            print("loginToResult:\(data)")
+            print("loginToResult:\(String(describing: data))")
             if let string = data as? String{
                 let alert = UIAlertController(title: "js给App的数据,App返回给js '张三'并显示到h5中", message: string, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "确定", style: .default, handler: nil))
@@ -58,7 +58,7 @@ class ViewController: UIViewController{
         bridge.callHandler(handlerName: "appToJSResult", data: ["name":"王五"]) {
             [weak self] (data) in
             guard let `self` = self else { return }
-            print("callHandler:\(data)")
+            print("callHandler:\(String(describing: data))")
             if let string = data as? String{
                 let alert = UIAlertController(title: "App已接收到js的反馈", message: string, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "确定", style: .default, handler: nil))
