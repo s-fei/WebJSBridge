@@ -47,7 +47,7 @@ typealias WebJSInitHandler = ( _ success:Bool, _ error:String) -> ()
     fileprivate var webView:UIWebView
     fileprivate var jsContext:JSContext
     fileprivate var jsModelDict:[String:WebJSModel] = [String:WebJSModel]()
-    fileprivate var webViewDelegate:UIWebViewDelegate?
+    fileprivate weak var webViewDelegate:UIWebViewDelegate?
     fileprivate var isFinishLoad = false
     fileprivate var cacheCallDict:[String:Any?] = [String:Any?]()
     /// 初始化桥接功能
@@ -74,7 +74,7 @@ typealias WebJSInitHandler = ( _ success:Bool, _ error:String) -> ()
             return
         }
         super.init()
-        jsContext.setObject(self, forKeyedSubscript: jsKey as (NSCopying & NSObjectProtocol)!)
+        jsContext.setObject(self, forKeyedSubscript: jsKey as (NSCopying & NSObjectProtocol)?)
         if let `handler` = handler {
             handler(true,"JS与iOS桥接成功")
         }
