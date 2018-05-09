@@ -74,7 +74,7 @@ typealias WebJSInitHandler = ( _ success:Bool, _ error:String) -> ()
             return
         }
         super.init()
-        jsContext.setObject(self, forKeyedSubscript: jsKey as (NSCopying & NSObjectProtocol)!)
+        jsContext.setObject(self, forKeyedSubscript: jsKey as (NSCopying & NSObjectProtocol)?)
         if let `handler` = handler {
             handler(true,"JS与iOS桥接成功")
         }
